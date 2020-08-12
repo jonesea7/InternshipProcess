@@ -1,11 +1,43 @@
-.ej-dropdown-content > .ej-has-children > ul {
-    visibility: hidden;
+body, html {
+    line-height: 1em;
+    color: #666;
+    margin: 0;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: red; /* INSERT COMPANY RED HERE */
-    font-family: monospace; /* INSERT FONT FROM A LIBRARY HERE THAT MATCHES THE FONT IN THE LOGO MORE*/
-
+.parallax-img-1, .parallax-img-2, .parallax-img-3 {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+.parallax-img-1 {
+    background-image: url(../img/img3audience.jpg);
+    height: 80vh;
+}
+
+.parallax-img-2 {
+    background-image: url(../img/img1.5chairs.jpg);
+    height: 400px; /*this may need to change for mobile*/
+}
+
+.parallax-img-3 {
+    background-image: url(../img/img3stage.jpg);
+    height: 400px;
+}
+
+section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: rgb(233, 235, 233);
+}
+
+.section-dark {
+    background-color: rgb(48, 45, 45);
+    color: rgb(233, 235, 233);
+}
