@@ -1,0 +1,11 @@
+.ej-dropdown-content > .ej-has-children > ul {
+    visibility: hidden;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: red; /* INSERT COMPANY RED HERE */
+    font-family: monospace; /* INSERT FONT FROM A LIBRARY HERE THAT MATCHES THE FONT IN THE LOGO MORE*/
+
+}
+
