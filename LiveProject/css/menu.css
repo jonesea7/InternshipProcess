@@ -32,10 +32,12 @@
 
 .menu-container .menu-trigger:checked ~ nav > div {
     transform: scale(1);
+    transition: 0.4s ease;
 }
 
 .menu-container .menu-trigger:checked ~ nav > div > div {
     opacity: 1;
+    transition: 0.4s ease;
 }
 
 
@@ -48,7 +50,7 @@
     flex: none;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 70%;
     transform: scale(0);
     transition: all 0.4s ease;
 }
