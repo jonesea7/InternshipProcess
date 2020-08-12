@@ -1,0 +1,94 @@
+/*This is the container for the entire menu/navbar*/
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* visibility: hidden; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*hide the nav bar, do this last so that you can see styling while working*/
+
+.menu-container nav {
+    visibility: hidden;
+}
+
+/*enlarge the area for the checkbox to about the size of a hamburger icon*/
+
+.menu-container .menu-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /* opacity: 0;  this is commented out until I create an animation over the checkbox */
+}
+
+/* SECTION CONTAINING ANIMATION INSTRUCTIONS WHEN CHECK BOX IS CHECKED OR TRIGGERED */
+
+.menu-container .menu-trigger:checked ~ nav {
+    visibility: visible;
+}
+
+.menu-container .menu-trigger:checked ~ nav > div {
+    transform: scale(1);
+    transition: 0.4s ease;
+}
+
+.menu-container .menu-trigger:checked ~ nav > div > div {
+    opacity: 1;
+    transition: 0.4s ease;
+}
+
+/* END OF CHECKBOX TRANSITIONS */
+
+/* THIS AFFECTS THE CONTAINER OF THE CONTAINER FOR THE UL 
+    the transform: scale() is what gives it the cool growing circle effect */
+
+.menu-container nav > div {
+    background-color:  rgba(255, 0, 0, 0.75);
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70%;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+/* this is the layer directly above the ul this adds another layer
+    of animation to the screen when the checkbox is triggered */
+
+.menu-container nav > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* this is the styling for the items in the li */
+
+.menu-container nav > div > div > ul > li {
+    list-style: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* further detailed styling for the <a> links in the <li> */
+.menu-container nav > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
