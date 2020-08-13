@@ -23,7 +23,7 @@
 /*enlarge the area for the checkbox to about the size of a hamburger icon*/
 
 .menu-container .menu-trigger {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
@@ -94,9 +94,14 @@
     transition: color 0.4s ease;
 }
 
+.accordion-container {
+    z-index: 5;
+}
+
 .sub-menu-trigger {
     display: block;
     position: relative;
+    cursor: pointer;
 }
 
  .sub-menu {
@@ -104,8 +109,8 @@
      overflow: hidden;
      margin: 0.5rem;
      border-radius: 0.5rem;
-    /*  transition: max-height 0.4s;
-     max-height: 0; */
+     transition: max-height 0.4s;
+     max-height: 0;
  }
 
  .sub-menu a {
@@ -137,6 +142,10 @@
  .sub-menu a:hover::before {
      opacity: 1;
      
+ }
+
+ .accordion-item:target .sub-menu {
+     max-height: 12rem;
  }
 
 
