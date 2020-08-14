@@ -57,11 +57,11 @@
 .menu-container nav > div {
     background-color:  rgba(255, 0, 0, 0.75);
     width: 200vw;
-    height: 200vh;
-    display: flex;
+    height: 135vh;
+    /* display: flex;
     flex: none;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     border-radius: 70%;
     transform: scale(0);
     transition: all 0.4s ease;
@@ -96,6 +96,10 @@
 
 .accordion-container {
     z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sub-menu-trigger {
