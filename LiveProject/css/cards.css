@@ -14,47 +14,63 @@ body {
 }
 
 main {
-    max-width: 800px;
-    height: 50vh;
     display: grid;
-    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
 }
 
-img {
-    max-width: 30vw;
-    max-height: 30vh;
-    grid-row: span 5;
-    grid-column: span 3;
-}
 
-section {
-    height: 60vh;
-    width: 50vw;
-    display: grid;
-}
+
 
 main section .cast-card {
     width: fit-content;
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-items: center;
-    border: 1px solid whitesmoke;
-    padding: 1.5rem;
-    border-radius: 6%;
+    text-align: center;
+    position: relative;
+    background: var(--secondary-color);
+}
+
+main section .cast-card img {
+    width: 100%;
+}
+
+main section .cast-card .background-pic {
+    transform: rotate(180deg);
+    clip-path: polygon(0 43%, 100% 2%, 100% 100%, 0 100%);
+    z-index: 1;
+    
+}
+
+main section .cast-card .profile-pic {
+    width: 30vw;
+    height: 40vh;
+    border: none;
+    border-radius: ;
+    position: relative;
+    top: -10rem;
+    left: 75%;
+}
+
+main section .cast-card .cast-name {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: .5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
 }
 
 main section .cast-card > article{
-    background: var(--secondary-color);
     padding: 1rem;
-    margin: 1rem;
-}
-
-main section .cast-card > h3 {
     position: relative;
-    bottom: 0;
-    padding: 1rem;
-
+    top: -10rem;
+    text-align: left;
 }
+
+
 
 main section .cast-card > p {
     position: relative;
