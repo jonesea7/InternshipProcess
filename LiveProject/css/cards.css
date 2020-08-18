@@ -114,7 +114,13 @@ main section .cast-card > p {
     }
 
     main section .cast-card:hover {
-        transform: translateX(-1rem);
+        transform: scale(1.15);
+        z-index: 6;
     }
+
+    /* main section .cast-card:nth-child(3n+3):hover {
+        transform: rotate(1deg);
+    } */
+
 
 }
