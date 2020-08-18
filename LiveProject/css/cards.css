@@ -4,6 +4,7 @@
     --dark-color: rgba(44, 42, 42, 1);
     --primary-color: rgba(199, 43, 43);
     --secondary-color: rgba(212, 52, 186);
+    box-sizing: border-box;
 }
 
 body {
@@ -14,23 +15,29 @@ body {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    
 
+}
+
+main section {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) ;
+    gap: 1rem;
 }
 
 
 
 
 main section .cast-card {
-    width: fit-content;
+    width: 20rem;
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-items: center;
-    text-align: center;
-    position: relative;
-    background: var(--secondary-color);
+    align-items: center;
+    justify-content: center;
+    margin: .5 2rem;
+    border-radius: 3% 0 3% 0;
 }
 
 main section .cast-card img {
@@ -42,40 +49,35 @@ main section .cast-card .background-pic {
     clip-path: polygon(0 43%, 100% 2%, 100% 100%, 0 100%);
     filter: hue-rotate(75deg);
     
+    
 }
 
 main section .cast-card .profile-pic {
-    width: 30vw;
-    height: 40vh;
-    border: none;
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover; /* this maintains aspect ratio*/
     border-radius: 50%;
     border: .5rem solid var(--secondary-color);
-    position: relative;
-    top: -10rem;
-    left: 65%;
+    margin-top: -11rem;
+    margin-right: -7rem; /* you can position by simply removing margin*/
+    z-index: 5;
 }
 
 main section .cast-card .cast-name {
-    position: absolute;
-    top: 13%;
-    right: 30%;
-    padding: .5rem;
+    padding: 1rem;
     font-size: 3rem;
     width: fit-content;
-    text-shadow: 3px 3px 9px rgb(157, 158, 233);
+    text-shadow: 3px 3px 9px rgb(226, 88, 208);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
 }
 
 main section .cast-card > article{
-    padding: 1rem;
-    position: relative;
-    top: -10rem;
-    text-align: left;
+    padding: 2rem;
 }
 
 
 
 main section .cast-card > p {
-    position: relative;
-    bottom: 0;
-    right: 0;
+    padding: 1rem;
 }
