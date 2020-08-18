@@ -40,7 +40,7 @@ main section .cast-card img {
 main section .cast-card .background-pic {
     transform: rotate(180deg);
     clip-path: polygon(0 43%, 100% 2%, 100% 100%, 0 100%);
-    z-index: 1;
+    filter: hue-rotate(75deg);
     
 }
 
@@ -48,19 +48,21 @@ main section .cast-card .profile-pic {
     width: 30vw;
     height: 40vh;
     border: none;
-    border-radius: ;
+    border-radius: 50%;
+    border: .5rem solid var(--secondary-color);
     position: relative;
     top: -10rem;
-    left: 75%;
+    left: 65%;
 }
 
 main section .cast-card .cast-name {
     position: absolute;
-    top: 0%;
-    right: 0%;
+    top: 13%;
+    right: 30%;
     padding: .5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-variant: small-caps;
+    font-size: 3rem;
+    width: fit-content;
+    text-shadow: 3px 3px 9px rgb(157, 158, 233);
 }
 
 main section .cast-card > article{
